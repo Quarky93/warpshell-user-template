@@ -19,6 +19,11 @@ build/xilinx_u55n_xdma_gen3x8_v2/abstract_shell.dcp:
 	cd ./build/xilinx_u55n_xdma_gen3x8_v2/; \
 	wget --output-document=abstract_shell.dcp https://github.com/Quarky93/warpshell/releases/download/warpshell-beta-v2/abstract_warpshell_xilinx_u55n_xdma_gen3x8.dcp
 
+build/xilinx_u250_xdma_gen3x8_exp/abstract_shell.dcp:
+	mkdir -p ./build/xilinx_u250_xdma_gen3x8_exp/
+	cd ./build/xilinx_u250_xdma_gen3x8_exp/; \
+	wget --output-document=abstract_shell.dcp https://github.com/Quarky93/warpshell/releases/download/warpshell-experimental-u250/abstract_warpshell_xilinx_u250_xdma_gen3x8.dcp
+
 impl: build/$(WARPSHELL)/abstract_shell.dcp
 	cp ./build/$(WARPSHELL)/abstract_shell.dcp ./build/$(WARPSHELL)/$(PERSONA)/
 	cd ./build/$(WARPSHELL)/$(PERSONA)/; \
